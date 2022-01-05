@@ -1,0 +1,65 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Profile - {{stockname}}</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #content {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        ul {
+            padding-top: 20px;
+            display: flex;
+        }
+
+        #logo {
+            padding-right: 20px;
+        }
+
+        hr.solid {
+            border-top: 8px solid rgba(160, 158, 158, 0.301);
+            border-radius: 2px;
+        }
+
+        #summary {
+            padding-left: 20;
+        }
+
+        #marketcap {
+            padding-left: 125px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="/">Stocks</a>
+            <a class="navbar-brand" href="/discover">Discover</a>
+            <a class="navbar-brand" href="/learn">Learn</a>
+        </nav>
+        <section id="content">
+            <section id="companyname">
+                <ul>
+                    <img id="logo" src="{{logo}}?size=60">
+                    <h1>{{stockname}} <span class="badge bg-secondary">${{price}}</span> </h1>
+                </ul>
+                <p id="marketcap">Market Cap - {{marketcap}}</p>
+                <hr class="solid">
+            </section>
+    
+            <div class="companydata">
+                <div id="summary">
+                    <h3>Summary</h3>
+                        <p>{{stocksummary}}</p>
+                </div>
+            </div>    
+        </section>
+
+    </body>
+</html
